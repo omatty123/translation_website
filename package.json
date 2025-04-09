@@ -1,0 +1,31 @@
+{
+  "name": "translation-website-final",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omatty123/translation_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omatty123/translation_website/issues"
+  },
+  "homepage": "https://github.com/omatty123/translation_website#readme",
+  "description": "",
+  "dependencies": {
+    "framer-motion": "^12.6.3",
+    "next": "^15.2.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "typescript": "^5.8.3"
+  }
+}
