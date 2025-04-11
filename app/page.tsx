@@ -10,12 +10,14 @@ export default function Home() {
           alt="Hanok background"
           layout="fill"
           objectFit="cover"
-          className="opacity-20"
+          className="opacity-30 blur-sm"
         />
+        {/* Overlay to darken slightly for text readability */}
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm"></div>
       </div>
 
       <div className="flex items-center justify-center px-4 py-24">
-        <div className="max-w-3xl w-full bg-white/80 backdrop-blur-md shadow-xl rounded-xl p-10 space-y-8">
+        <div className="max-w-3xl w-full bg-white/90 shadow-xl rounded-xl p-10 space-y-8">
           <header className="text-center space-y-1">
             <p className="text-sm text-gray-600 tracking-wide">한영 학술 번역</p>
             <h1 className="text-4xl font-serif font-semibold text-gray-900">
