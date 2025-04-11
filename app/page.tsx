@@ -1,63 +1,44 @@
-'use client';
-import { Card, CardContent } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { motion } from "framer-motion";
-
-const MotionDiv = motion.div;
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white p-6 grid gap-8">
-      <MotionDiv
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center"
-      >
-        <h1 className="text-4xl font-bold">Korean to English Academic Translation</h1>
-        <p className="mt-4 text-lg max-w-xl mx-auto">
-          Precision. Clarity. Cultural fluency. Built on two decades of experience translating academic articles, books, and university-level materials.
+    <main className="min-h-screen bg-[#FAF9F7] flex items-center justify-center px-4">
+      <div className="max-w-2xl w-full space-y-8 py-16">
+        <header className="text-center space-y-2">
+          <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-900">
+            Korean to English Academic Translation
+          </h1>
+          <p className="text-gray-700 text-lg">
+            Precision. Clarity. Cultural fluency. Built on two decades of experience translating academic articles, books, and university-level materials.
+          </p>
+        </header>
+
+        <section className="space-y-6 text-gray-800">
+          <div>
+            <h2 className="text-xl font-semibold font-serif text-gray-900">Academic Articles</h2>
+            <p>Peer-reviewed journal submissions, conference papers, and research articles across humanities and social sciences.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold font-serif text-gray-900">Books & Manuscripts</h2>
+            <p>Full-length books, edited volumes, and critical translations for publication or internal use.</p>
+          </div>
+          <div>
+            <h2 className="text-xl font-semibold font-serif text-gray-900">University Materials</h2>
+            <p>Course syllabi, lecture slides, academic bios, and grant proposals — all rendered in fluent academic English.</p>
+          </div>
+        </section>
+
+        <div className="text-center pt-4">
+          <a
+            href="mailto:omatty@gmail.com"
+            className="inline-block px-6 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
+          >
+            Contact Me
+          </a>
+        </div>
+
+        <p className="text-center text-gray-600 text-sm">
+          Let’s talk about your project — big or small.
         </p>
-      </MotionDiv>
-
-      <section className="grid md:grid-cols-3 gap-6">
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold">Academic Articles</h2>
-            <p className="mt-2 text-sm text-gray-600">
-              Peer-reviewed journal submissions, conference papers, and research articles across humanities and social sciences.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold">Books & Manuscripts</h2>
-            <p className="mt-2 text-sm text-gray-600">
-              Full-length books, edited volumes, and critical translations for publication or internal use.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-4">
-            <h2 className="text-xl font-semibold">University Materials</h2>
-            <p className="mt-2 text-sm text-gray-600">
-              Course syllabi, lecture slides, academic bios, and grant proposals — all rendered in fluent academic English.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      <MotionDiv
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-center"
-      >
-        <Button className="text-lg px-6 py-3">Contact Me</Button>
-        <p className="text-sm text-gray-500 mt-2">Let’s talk about your project — big or small.</p>
-      </MotionDiv>
+      </div>
     </main>
   );
 }
