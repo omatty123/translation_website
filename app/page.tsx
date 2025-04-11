@@ -1,20 +1,8 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#f9f8f6] text-gray-800 font-sans">
-      {/* Background image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/Hanok-Ondol-room-maru-floor.jpg"
-          alt="Hanok background"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-30 blur-sm"
-        />
-        {/* Overlay to darken slightly for text readability */}
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm"></div>
-      </div>
+    <main className="relative min-h-screen bg-[url('/Hanok-Ondol-room-maru-floor.jpg')] bg-cover bg-center bg-no-repeat">
+      {/* Overlay for blur and dimming */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-sm -z-10" />
 
       <div className="flex items-center justify-center px-4 py-24">
         <div className="max-w-3xl w-full bg-white/90 shadow-xl rounded-xl p-10 space-y-8">
