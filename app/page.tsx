@@ -1,17 +1,30 @@
+import Image from "next/image";
+import hanokBg from "/public/Hanok-Ondol-room-maru-floor.jpg";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-800 font-sans">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-100 to-indigo-100 py-24 px-6 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold">Matty Wegehaupt</h1>
-          <p className="text-xl md:text-2xl">
-            Translator, educator, and Buddhist studies scholar.  
-            Bridging languages and cultures with precision and compassion.
+
+      {/* Hero with Background */}
+      <section className="relative h-[90vh] w-full">
+        <Image
+          src={hanokBg}
+          alt="Hanok with maru floor"
+          layout="fill"
+          objectFit="cover"
+          quality={90}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
+            Matty Wegehaupt
+          </h1>
+          <p className="mt-4 text-xl md:text-2xl text-white max-w-xl drop-shadow-md">
+            Literary translator and scholar of Korean Buddhism, grounded in tradition and clarity.
           </p>
           <a
             href="mailto:your@email.com"
-            className="inline-block px-6 py-3 bg-indigo-600 text-white text-lg rounded-xl shadow hover:bg-indigo-700 transition"
+            className="mt-6 px-6 py-3 bg-white text-gray-800 rounded-lg shadow hover:bg-gray-100 transition"
           >
             Contact Me
           </a>
@@ -62,22 +75,6 @@ export default function Home() {
       <footer className="py-10 text-center text-sm text-gray-500 bg-gray-50">
         © {new Date().getFullYear()} Matty Wegehaupt. All rights reserved.
       </footer>
-
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-white to-blue-50 text-gray-800 px-6">
-      <div className="max-w-2xl text-center space-y-8">
-        <h1 className="text-5xl font-bold tracking-tight">
-          Precision. Clarity. Connection.
-        </h1>
-        <p className="text-lg leading-relaxed">
-          Thoughtful, professional translation for your most important ideas. From Korean to English, English to Korean — built on nuance and care.
-        </p>
-        <a
-          href="mailto:your@email.com"
-          className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-        >
-          Get in Touch
-        </a>
-      </div>
- </main>
+    </main>
   );
 }
