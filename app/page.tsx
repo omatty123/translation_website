@@ -136,21 +136,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Article */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-semibold">Academic Work</h2>
-          <a
-            href="https://muse.jhu.edu/article/481031/summary"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-600 underline text-lg hover:text-indigo-800"
-          >
-            Read on Project MUSE
-          </a>
-        </div>
-      </section>
-
+    {/* Academic Work */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-4xl mx-auto text-center space-y-6">
+    <h2 className="text-3xl font-semibold">Academic Work</h2>
+    <div className="text-lg text-gray-700 leading-relaxed">
+      <p><strong>The Activities and Significance of Temple Fraternities in Late Chosŏn Buddhism</strong></p>
+      <p>Sangkil Han, Matty Wegehaupt</p>
+      <p><em>Journal of Korean Religions</em>, University of Hawaiʻi Press</p>
+      <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
+    </div>
+    <a
+      href="/temple-fraternities.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block mt-4 px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
+    >
+      Download Full Article (PDF)
+    </a>
+  </div>
+</section>
+      
       {/* Footer */}
       <footer className="py-10 text-center text-sm text-gray-500 bg-gray-50">
         © {new Date().getFullYear()} Matty Wegehaupt. All rights reserved.
