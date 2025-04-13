@@ -93,28 +93,59 @@ export default function Home() {
       </section>
 
       {/* Courses */}
-      <section className="py-20 px-6 bg-blue-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-10">Courses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Buddhist Beliefs in Korea", prof: "Prof. Ok Nayeong", img: beliefsImg },
-              { title: "Daily Life and Disciplines of Korean Monasteries", prof: "Prof. Lee Jarang", img: monasteriesImg },
-              { title: "Korean Buddhist Literature", prof: "Prof. Kim Jongjin", img: literatureImg },
-              { title: "History and Culture of Sŏn", prof: "Prof. Cho Myung-je", img: songImg },
-              { title: "Korean Buddhism and Business", prof: "Prof. Cho Ki-ryong", img: businessImg },
-            ].map(({ title, prof, img }, idx) => (
-              <div key={idx} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition">
-                <Image src={img} alt={title} className="w-full object-cover" />
-                <div className="p-4 space-y-1">
-                  <h3 className="font-semibold text-lg">{title}</h3>
-                  <p className="text-sm text-gray-600">{prof}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Courses */}
+<section className="py-20 px-6 bg-blue-50">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-3xl font-semibold mb-10">Courses</h2>
+    <ul className="space-y-6 text-lg leading-relaxed text-left">
+      <li>
+        <a
+          href="https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136"
+          className="text-indigo-600 underline hover:text-indigo-800"
+          target="_blank"
+        >
+          Buddhist Beliefs in Korea (한국의 불교 신앙)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914"
+          className="text-indigo-600 underline hover:text-indigo-800"
+          target="_blank"
+        >
+          Daily Life and Disciplines of Korean Monasteries (한국사찰의 일상과 규범)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115"
+          className="text-indigo-600 underline hover:text-indigo-800"
+          target="_blank"
+        >
+          Korean Buddhist Literature (한국의 불교문학)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824"
+          className="text-indigo-600 underline hover:text-indigo-800"
+          target="_blank"
+        >
+          History and Culture of Sŏn (선의 역사와 문화)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035"
+          className="text-indigo-600 underline hover:text-indigo-800"
+          target="_blank"
+        >
+          Korean Buddhism and Business (한국불교와 비즈니스)
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
 
       {/* Article */}
       <section className="py-20 px-6 bg-white">
