@@ -28,7 +28,7 @@ export default function Home() {
             Translator, educator, and scholar of Korean Buddhism.
           </p>
           <a
-            href="mailto:your@email.com"
+            href="mailto:omatty@gmail.com"
             className="mt-6 px-6 py-3 bg-white text-gray-800 rounded-lg shadow hover:bg-gray-100 transition"
           >
             Contact Me
