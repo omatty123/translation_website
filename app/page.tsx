@@ -25,7 +25,7 @@ export default function Home() {
             Matty Wegehaupt
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-white max-w-xl drop-shadow-md">
-            Translator, educator, and scholar of Korean Buddhism.
+            Translator, educator, and scholar of Korean Buddhism and beyond.
           </p>
           <a
             href="mailto:omatty@gmail.com"
@@ -52,7 +52,7 @@ export default function Home() {
                 </a>
               </strong>
               <br />
-              Seon essays by Korean Buddhist monk Beopjeong, translated by Matty Wegehaupt.
+              Seon essays by Korean Buddhist monk Beopjeong, translated by Matty Wegehaupt
             </li>
             <li>
               <strong>
@@ -65,7 +65,7 @@ export default function Home() {
                 </a>
               </strong>
               <br />
-              Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt.
+              Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt
             </li>
           </ul>
         </div>
@@ -98,7 +98,7 @@ export default function Home() {
       {/* Article */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-semibold">Academic Article</h2>
+          <h2 className="text-3xl font-semibold">Academic Work</h2>
           <a
             href="https://muse.jhu.edu/article/481031/summary"
             target="_blank"
