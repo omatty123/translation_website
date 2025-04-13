@@ -3,7 +3,7 @@ import hanokBg from "/public/Hanok-Ondol-room-maru-floor.jpg";
 import beliefsImg from "/public/beliefs.png";
 import monasteriesImg from "/public/monasteries.png";
 import literatureImg from "/public/literature.png";
-import sonImg from "/public/son.png";
+import songImg from "/public/song.png";
 import businessImg from "/public/business.png";
 
 export default function Home() {
@@ -76,11 +76,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-10">Courses</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[ 
+            {[
               { title: "Buddhist Beliefs in Korea", prof: "Prof. Ok Nayeong", img: beliefsImg },
               { title: "Daily Life and Disciplines of Korean Monasteries", prof: "Prof. Lee Jarang", img: monasteriesImg },
               { title: "Korean Buddhist Literature", prof: "Prof. Kim Jongjin", img: literatureImg },
-              { title: "History and Culture of Sŏn", prof: "Prof. Cho Myung-je", img: sonImg },
+              { title: "History and Culture of Sŏn", prof: "Prof. Cho Myung-je", img: songImg },
               { title: "Korean Buddhism and Business", prof: "Prof. Cho Ki-ryong", img: businessImg },
             ].map(({ title, prof, img }, idx) => (
               <div key={idx} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition">
