@@ -7,6 +7,7 @@ import songImg from "/public/song.png";
 import businessImg from "/public/business.png";
 import pureImg from "/public/malgohyangi.png";
 import happyImg from "/public/mabbh.jpg";
+import cultureImg from "/public/culture.png"; // ← ADD your image here
 
 export default function Home() {
   return (
@@ -38,49 +39,55 @@ export default function Home() {
         </div>
       </section>
 
-   {/* Books */}
-<section className="py-20 px-6 bg-white">
-  <div className="max-w-5xl mx-auto">
-    <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-      {[ 
-        {
-          title: "Pure and Fragrant",
-          img: pureImg,
-          url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-          desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
-        },
-        {
-          title: "May All Beings Be Happy",
-          img: happyImg,
-          url: "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736?dib=eyJ2IjoiMSJ9.gOdpLA0A8W1bWmugd0wfxw.s_FzxBnVcfqQMC8Py3FaZItpayyhvESYwTILzb_wt_M&dib_tag=se&keywords=9788995757734&linkCode=qs&qid=1744551762&s=books&sr=1-1",
-          desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
-        }
-      ].map(({ title, img, url, desc }, idx) => (
-        <div key={idx} className="flex flex-col items-center">
-          <div className="w-[260px] aspect-[3/4] relative">
-            <Image
-              src={img}
-              alt={title}
-              fill
-              className="object-contain rounded shadow"
-            />
-          </div>
-          <div className="text-center mt-4">
-            <a
-              href={url}
-              className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
-              target="_blank"
-            >
-              {title}
-            </a>
-            <p className="text-sm mt-1">{desc}</p>
+      {/* Books */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {[ 
+              {
+                title: "Pure and Fragrant",
+                img: pureImg,
+                url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
+                desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
+              },
+              {
+                title: "May All Beings Be Happy",
+                img: happyImg,
+                url: "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736?dib=eyJ2IjoiMSJ9.gOdpLA0A8W1bWmugd0wfxw.s_FzxBnVcfqQMC8Py3FaZItpayyhvESYwTILzb_wt_M&dib_tag=se&keywords=9788995757734&linkCode=qs&qid=1744551762&s=books&sr=1-1",
+                desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
+              },
+              {
+                title: "Korean Buddhist Culture",
+                img: cultureImg,
+                url: "https://www.academia.edu/10032788", // or better link if available
+                desc: "Accounts of a pilgrimage, monuments, and eminent monks. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch"
+              }
+            ].map(({ title, img, url, desc }, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <div className="w-[260px] aspect-[3/4] relative">
+                  <Image
+                    src={img}
+                    alt={title}
+                    fill
+                    className="object-contain rounded shadow"
+                  />
+                </div>
+                <div className="text-center mt-4">
+                  <a
+                    href={url}
+                    className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
+                    target="_blank"
+                  >
+                    {title}
+                  </a>
+                  <p className="text-sm mt-1">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Courses */}
       <section className="py-20 px-6 bg-blue-50">
