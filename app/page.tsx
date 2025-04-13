@@ -5,6 +5,8 @@ import monasteriesImg from "/public/monasteries.png";
 import literatureImg from "/public/literature.png";
 import songImg from "/public/song.png";
 import businessImg from "/public/business.png";
+import pureImg from "/public/malgohyangi.jpg";
+import happyImg from "/public/mabbh.jpg";
 
 export default function Home() {
   return (
@@ -25,7 +27,7 @@ export default function Home() {
             Matty Wegehaupt
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-white max-w-xl drop-shadow-md">
-            Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond 
+            Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond
           </p>
           <a
             href="mailto:omatty@gmail.com"
@@ -38,36 +40,55 @@ export default function Home() {
 
       {/* Books */}
       <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-8">Books</h2>
-          <ul className="space-y-6 text-lg leading-relaxed">
-            <li>
-              <strong>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Pure and Fragrant */}
+            <div className="flex flex-col items-center text-center space-y-4">
+              <Image
+                src={pureImg}
+                alt="Pure and Fragrant"
+                width={240}
+                height={320}
+                className="rounded shadow"
+              />
+              <div>
                 <a
                   href="https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ"
-                  className="text-indigo-600 underline hover:text-indigo-800"
+                  className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
                   target="_blank"
                 >
                   Pure and Fragrant
                 </a>
-              </strong>
-              <br />
-              Seon essays by Korean Buddhist monk Beopjeong, translated by Matty Wegehaupt
-            </li>
-            <li>
-              <strong>
+                <p className="mt-2 text-sm">
+                  Seon essays by Beopjeong, translated by Matty Wegehaupt
+                </p>
+              </div>
+            </div>
+
+            {/* May All Beings Be Happy */}
+            <div className="flex flex-col items-center text-center space-y-4">
+              <Image
+                src={happyImg}
+                alt="May All Beings Be Happy"
+                width={240}
+                height={320}
+                className="rounded shadow"
+              />
+              <div>
                 <a
                   href="https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong"
-                  className="text-indigo-600 underline hover:text-indigo-800"
+                  className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
                   target="_blank"
                 >
                   May All Beings Be Happy
                 </a>
-              </strong>
-              <br />
-              Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt
-            </li>
-          </ul>
+                <p className="mt-2 text-sm">
+                  Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
