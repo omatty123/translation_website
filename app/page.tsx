@@ -48,19 +48,19 @@ export default function Home() {
                 title: "Pure and Fragrant",
                 img: pureImg,
                 url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-                desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
+                desc: "Seon essays by Master Beopjeong"
               },
               {
                 title: "May All Beings Be Happy",
                 img: happyImg,
                 url: "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736",
-                desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
+                desc: "Dharma sayings written by Master Beopjeong"
               },
               {
                 title: "Memoirs of a Pilgrimage to the Five Indian Kingdoms",
                 img: hyechoImg,
                 url: "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35",
-                desc: "Hyecho’s *Memoirs of a Pilgrimage to the Five Indian Kingdoms* in *Accounts of a Pilgrimage, Monuments, and Eminent Monks*. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch"
+                desc: "in *Accounts of a Pilgrimage, Monuments, and Eminent Monks*"
               }
             ].map(({ title, img, url, desc }, idx) => (
               <div key={idx} className="flex flex-col items-center">
