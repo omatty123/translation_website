@@ -53,7 +53,7 @@ export default function Home() {
         {
           title: "May All Beings Be Happy",
           img: happyImg,
-          url: "https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong",
+          url: "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736?dib=eyJ2IjoiMSJ9.gOdpLA0A8W1bWmugd0wfxw.s_FzxBnVcfqQMC8Py3FaZItpayyhvESYwTILzb_wt_M&dib_tag=se&keywords=9788995757734&linkCode=qs&qid=1744551762&s=books&sr=1-1",
           desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
         }
       ].map(({ title, img, url, desc }, idx) => (
