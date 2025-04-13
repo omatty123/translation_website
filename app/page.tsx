@@ -38,48 +38,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Books */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {[ 
-              {
-                title: "Pure and Fragrant",
-                img: pureImg,
-                url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-                desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
-              },
-              {
-                title: "May All Beings Be Happy",
-                img: happyImg,
-                url: "https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong",
-                desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
-              }
-            ].map(({ title, img, url, desc }, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center">
-                <Image
-                  src={img}
-                  alt={title}
-                  height={320}
-                  style={{ width: "auto" }}
-                  className="rounded shadow mb-4"
-                />
-                <div className="flex flex-col justify-between flex-grow h-[100px]">
-                  <a
-                    href={url}
-                    className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
-                    target="_blank"
-                  >
-                    {title}
-                  </a>
-                  <p className="mt-2 text-sm">{desc}</p>
-                </div>
-              </div>
-            ))}
+     {/* Books */}
+<section className="py-20 px-6 bg-white">
+  <div className="max-w-5xl mx-auto">
+    <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {[
+        {
+          title: "Pure and Fragrant",
+          img: pureImg,
+          url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
+          desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
+        },
+        {
+          title: "May All Beings Be Happy",
+          img: happyImg,
+          url: "https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong",
+          desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
+        }
+      ].map(({ title, img, url, desc }, idx) => (
+        <div
+          key={idx}
+          className="flex flex-col items-center text-center"
+        >
+          <Image
+            src={img}
+            alt={title}
+            height={320}
+            style={{ width: "auto" }}
+            className="rounded shadow mb-4"
+          />
+          <div className="leading-snug">
+            <a
+              href={url}
+              className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
+              target="_blank"
+            >
+              {title}
+            </a>
+            <p className="text-sm mt-1">{desc}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Courses */}
       <section className="py-20 px-6 bg-blue-50">
