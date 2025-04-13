@@ -38,11 +38,11 @@ export default function Home() {
         </div>
       </section>
 
-    {/* Books */}
+   {/* Books */}
 <section className="py-20 px-6 bg-white">
   <div className="max-w-5xl mx-auto">
     <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
       {[
         {
           title: "Pure and Fragrant",
@@ -57,19 +57,19 @@ export default function Home() {
           desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
         }
       ].map(({ title, img, url, desc }, idx) => (
-        <div key={idx} className="flex flex-col items-center space-y-4">
+        <div key={idx} className="flex flex-col items-center justify-start h-full">
           <Image
             src={img}
             alt={title}
             width={260}
-            height={360}
+            height={370}
             className="rounded shadow object-contain"
           />
-          <div className="leading-tight">
+          <div className="flex flex-col items-center mt-4 leading-tight">
             <a
               href={url}
-              className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
               target="_blank"
+              className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
             >
               {title}
             </a>
