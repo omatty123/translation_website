@@ -43,111 +43,98 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Pure and Fragrant */}
-            <div className="flex flex-col items-center text-center space-y-4">
-                            
-              
-             <Image
-  src={pureImg}
-  alt="Pure and Fragrant"
-  height={320}
-  style={{ width: "auto" }}
-  className="rounded shadow"
-/>
-              <div>
-                <a
-                  href="https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ"
-                  className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
-                  target="_blank"
-                >
-                  Pure and Fragrant
-                </a>
-                <p className="mt-2 text-sm">
-                  Seon essays by Beopjeong, translated by Matty Wegehaupt
-                </p>
+            {[ 
+              {
+                title: "Pure and Fragrant",
+                img: pureImg,
+                url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
+                desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
+              },
+              {
+                title: "May All Beings Be Happy",
+                img: happyImg,
+                url: "https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong",
+                desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
+              }
+            ].map(({ title, img, url, desc }, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center space-y-4">
+                <Image
+                  src={img}
+                  alt={title}
+                  height={320}
+                  style={{ width: "auto" }}
+                  className="rounded shadow"
+                />
+                <div className="min-h-[80px] flex flex-col justify-start">
+                  <a
+                    href={url}
+                    className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
+                    target="_blank"
+                  >
+                    {title}
+                  </a>
+                  <p className="mt-2 text-sm">{desc}</p>
+                </div>
               </div>
-            </div>
-
-            {/* May All Beings Be Happy */}
-            <div className="flex flex-col items-center text-center space-y-4">
-              <Image
-  src={happyImg}
-  alt="May All Beings Be Happy"
-  height={320}
-  style={{ width: "auto" }}
-  className="rounded shadow"
-/>
-              <div>
-                <a
-                  href="https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong"
-                  className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
-                  target="_blank"
-                >
-                  May All Beings Be Happy
-                </a>
-                <p className="mt-2 text-sm">
-                  Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Courses */}
-      {/* Courses */}
-<section className="py-20 px-6 bg-blue-50">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-3xl font-semibold mb-10">Courses</h2>
-    <ul className="space-y-6 text-lg leading-relaxed text-left">
-      <li>
-        <a
-          href="https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136"
-          className="text-indigo-600 underline hover:text-indigo-800"
-          target="_blank"
-        >
-          Buddhist Beliefs in Korea (한국의 불교 신앙)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914"
-          className="text-indigo-600 underline hover:text-indigo-800"
-          target="_blank"
-        >
-          Daily Life and Disciplines of Korean Monasteries (한국사찰의 일상과 규범)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115"
-          className="text-indigo-600 underline hover:text-indigo-800"
-          target="_blank"
-        >
-          Korean Buddhist Literature (한국의 불교문학)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824"
-          className="text-indigo-600 underline hover:text-indigo-800"
-          target="_blank"
-        >
-          History and Culture of Sŏn (선의 역사와 문화)
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035"
-          className="text-indigo-600 underline hover:text-indigo-800"
-          target="_blank"
-        >
-          Korean Buddhism and Business (한국불교와 비즈니스)
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
+      <section className="py-20 px-6 bg-blue-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10">Courses</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Buddhist Beliefs in Korea",
+                korean: "한국의 불교 신앙",
+                img: beliefsImg,
+                url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136"
+              },
+              {
+                title: "Daily Life and Disciplines of Korean Monasteries",
+                korean: "한국사찰의 일상과 규범",
+                img: monasteriesImg,
+                url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914"
+              },
+              {
+                title: "Korean Buddhist Literature",
+                korean: "한국의 불교문학",
+                img: literatureImg,
+                url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115"
+              },
+              {
+                title: "History and Culture of Sŏn",
+                korean: "선의 역사와 문화",
+                img: songImg,
+                url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824"
+              },
+              {
+                title: "Korean Buddhism and Business",
+                korean: "한국불교와 비즈니스",
+                img: businessImg,
+                url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035"
+              },
+            ].map(({ title, korean, img, url }, idx) => (
+              <a
+                key={idx}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition block"
+              >
+                <Image src={img} alt={title} className="w-full object-cover" />
+                <div className="p-4 space-y-1">
+                  <h3 className="font-semibold text-lg">{title}</h3>
+                  <p className="text-sm text-gray-600">{korean}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Article */}
       <section className="py-20 px-6 bg-white">
