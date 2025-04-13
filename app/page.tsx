@@ -5,7 +5,7 @@ import monasteriesImg from "/public/monasteries.png";
 import literatureImg from "/public/literature.png";
 import songImg from "/public/song.png";
 import businessImg from "/public/business.png";
-import pureImg from "/public/malgohyangi.jpg";
+import pureImg from "/public/malgohyangi.png";
 import happyImg from "/public/mabbh.jpg";
 
 export default function Home() {
