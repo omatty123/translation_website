@@ -27,7 +27,7 @@ export default function Home() {
             Matty Wegehaupt
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-white max-w-xl drop-shadow-md">
-            Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond
+            Translation, Editing, and Collaboration in Korean/English Buddhist work
           </p>
           <a
             href="mailto:omatty@gmail.com"
