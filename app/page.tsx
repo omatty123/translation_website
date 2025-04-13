@@ -57,11 +57,11 @@ export default function Home() {
                 desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt",
               },
               {
-                title: "Memoirs of a Pilgrimage to the Five Indian Kingdoms",
+                title: "Hyecho's Memoirs of a Pilgrimage to the Five Indian Kingdoms",
                 img: hyechoImg,
                 url: "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35",
                 desc:
-                  "Hyecho’s *Memoirs of a Pilgrimage to the Five Indian Kingdoms* in *Accounts of a Pilgrimage, Monuments, and Eminent Monks*. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch",
+                  "in *Accounts of a Pilgrimage, Monuments, and Eminent Monks*. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch",
               },
             ].map(({ title, img, url, desc }, idx) => (
               <div key={idx} className="flex flex-col items-center">
