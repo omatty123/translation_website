@@ -42,7 +42,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-12">Books</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {[ 
               {
                 title: "Pure and Fragrant",
@@ -57,7 +57,7 @@ export default function Home() {
                 desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
               }
             ].map(({ title, img, url, desc }, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center space-y-4 h-full">
+              <div key={idx} className="flex flex-col items-center text-center space-y-4">
                 <Image
                   src={img}
                   alt={title}
@@ -65,7 +65,7 @@ export default function Home() {
                   style={{ width: "auto" }}
                   className="rounded shadow"
                 />
-                <div className="h-28 flex flex-col justify-start">
+                <div className="min-h-[120px] flex flex-col justify-between text-center">
                   <a
                     href={url}
                     className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
