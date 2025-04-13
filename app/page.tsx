@@ -45,13 +45,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Pure and Fragrant */}
             <div className="flex flex-col items-center text-center space-y-4">
-              <Image
-                src={pureImg}
-                alt="Pure and Fragrant"
-                width={240}
-                height={320}
-                className="rounded shadow"
-              />
+                            
+              
+             <Image
+  src={pureImg}
+  alt="Pure and Fragrant"
+  height={320}
+  style={{ width: "auto" }}
+  className="rounded shadow"
+/>
               <div>
                 <a
                   href="https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ"
@@ -69,12 +71,12 @@ export default function Home() {
             {/* May All Beings Be Happy */}
             <div className="flex flex-col items-center text-center space-y-4">
               <Image
-                src={happyImg}
-                alt="May All Beings Be Happy"
-                width={240}
-                height={320}
-                className="rounded shadow"
-              />
+  src={happyImg}
+  alt="May All Beings Be Happy"
+  height={320}
+  style={{ width: "auto" }}
+  className="rounded shadow"
+/>
               <div>
                 <a
                   href="https://books.google.com/books?id=A9tcMgAACAAJ&dq=may+all+beings+be+happy+beopjeong"
