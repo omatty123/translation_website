@@ -57,15 +57,15 @@ export default function Home() {
                 desc: "Dharma sayings compiled by Ryu Shiva, translated by Matty Wegehaupt"
               }
             ].map(({ title, img, url, desc }, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center space-y-4">
+              <div key={idx} className="flex flex-col items-center text-center">
                 <Image
                   src={img}
                   alt={title}
                   height={320}
                   style={{ width: "auto" }}
-                  className="rounded shadow"
+                  className="rounded shadow mb-4"
                 />
-                <div className="min-h-[120px] flex flex-col justify-between text-center">
+                <div className="flex flex-col justify-between flex-grow h-[100px]">
                   <a
                     href={url}
                     className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
