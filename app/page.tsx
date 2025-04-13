@@ -65,7 +65,7 @@ export default function Home() {
                   style={{ width: "auto" }}
                   className="rounded shadow"
                 />
-                <div className="min-h-[80px] flex flex-col justify-start">
+                <div className="h-28 flex flex-col justify-start">
                   <a
                     href={url}
                     className="text-indigo-600 text-xl font-semibold underline hover:text-indigo-800"
