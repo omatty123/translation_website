@@ -60,7 +60,7 @@ export default function Home() {
               {
                 title: "Korean Buddhist Culture",
                 img: cultureImg,
-                url: "https://www.academia.edu/10032788", // or better link if available
+                url: "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf", // or better link if available
                 desc: "Accounts of a pilgrimage, monuments, and eminent monks. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch"
               }
             ].map(({ title, img, url, desc }, idx) => (
