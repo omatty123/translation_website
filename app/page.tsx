@@ -49,7 +49,7 @@ export default function Home() {
                 title: "Pure and Fragrant",
                 img: pureImg,
                 url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-                desc: "Seon essays by Beopjeong, translated by Matty Wegehaupt"
+                desc: "Seon essays by Master Beopjeong, translated by Matty Wegehaupt"
               },
               {
                 title: "May All Beings Be Happy",
@@ -61,7 +61,7 @@ export default function Home() {
                 title: "Korean Buddhist Culture",
                 img: cultureImg,
                 url: "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf", // or better link if available
-                desc: "Accounts of a pilgrimage, monuments, and eminent monks. Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch"
+                desc: "Hyecho's <em>Memoirs of a Pilgrimage to the Five Indian Kingdoms</em>, in *Accounts of a pilgrimage, monuments, and eminent monks.* Translated by Matty Wegehaupt, Michael Finch, and Sem Vermeersch"
               }
             ].map(({ title, img, url, desc }, idx) => (
               <div key={idx} className="flex flex-col items-center">
