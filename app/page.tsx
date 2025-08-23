@@ -1,5 +1,8 @@
+// app/page.tsx
 import Head from 'next/head'
 import Image from 'next/image'
+
+// Images (unchanged paths)
 import hanokBg from '/public/Hanok-Ondol-room-maru-floor.jpg'
 import beliefsImg from '/public/beliefs.png'
 import monasteriesImg from '/public/monasteries.png'
@@ -11,6 +14,68 @@ import happyImg from '/public/mabbh.jpg'
 import hyechoImg from '/public/hyecho.png'
 
 export default function Home() {
+  const books = [
+    {
+      title: 'Pure and Fragrant',
+      img: pureImg,
+      url: 'https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ',
+      desc: 'Culminating work of Seon essays by Master Beopjeong',
+    },
+    {
+      title: 'May All Beings Be Happy',
+      img: happyImg,
+      url: 'https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736',
+      desc: 'Dharma sayings of Master Beopjeong',
+    },
+    {
+      title: "Hyecho's Memoirs of a Pilgrimage to the Five Indian Kingdoms",
+      img: hyechoImg,
+      url: 'https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35',
+      desc: 'in <em>Accounts of a Pilgrimage, Monuments, and Eminent Monks</em>',
+    },
+  ]
+
+  const courses = [
+    {
+      title: 'Buddhist Beliefs in Korea',
+      ko: '한국의 불교 신앙',
+      img: beliefsImg,
+      url: 'https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136',
+    },
+    {
+      title: 'Daily Life and Disciplines of Korean Monasteries',
+      ko: '한국사찰의 일상과 규범',
+      img: monasteriesImg,
+      url: 'https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914',
+    },
+    {
+      title: 'Korean Buddhist Literature',
+      ko: '한국의 불교문학',
+      img: literatureImg,
+      url: 'https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115',
+    },
+    {
+      title: 'History and Culture of Sŏn',
+      ko: '선의 역사와 문화',
+      img: songImg,
+      url: 'https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824',
+    },
+    {
+      title: 'Korean Buddhism and Business',
+      ko: '한국불교와 비즈니스',
+      img: businessImg,
+      url: 'https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035',
+    },
+  ]
+
+  const academic = {
+    title:
+      'The Activities and Significance of Temple Fraternities in Late Chosŏn Buddhism',
+    by: 'Sangkil Han, Matty Wegehaupt',
+    journal:
+      'Journal of Korean Religions, University of Hawaiʻi Press — Volume 3, Number 1, April 2012, pp. 29–63',
+  }
+
   return (
     <>
       <Head>
@@ -21,165 +86,117 @@ export default function Home() {
         />
       </Head>
 
-      <main className="min-h-screen bg-white text-gray-800 font-sans">
-        {/* Hero — intentionally small: ~224–288px tall */}
-        <section className="relative h-56 md:h-72 flex items-center justify-center overflow-hidden">
+      <main className="bg-white text-gray-800 font-sans">
+        {/* Slim hero */}
+        <section className="relative h-40 md:h-48 flex items-center justify-center overflow-hidden">
           <Image
             src={hanokBg}
             alt="Traditional Hanok ondol floor"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
             priority
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/45" />
           <div className="relative z-10 text-center px-4 max-w-2xl">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 leading-tight tracking-tight">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
               Matty Wegehaupt (오상진)
             </h1>
-            <p className="text-sm md:text-base text-gray-200 mb-3">
+            <p className="text-sm md:text-base text-gray-200">
               Translation, Editing, and Collaboration in Korean/English Buddhist work
             </p>
             <a
               href="mailto:omatty@gmail.com"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 px-5 rounded-lg transition"
+              className="mt-3 inline-block bg-indigo-600 hover:bg-indigo-500 text-white text-sm md:text-base font-medium py-2 px-4 rounded-lg transition"
             >
               Contact Me
             </a>
           </div>
         </section>
 
-        {/* Books — compact */}
-        <section className="py-10 px-6 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Books</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-              {[
-                {
-                  title: "Pure and Fragrant",
-                  img: pureImg,
-                  url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-                  desc: "Culminating work of Seon essays by Master Beopjeong",
-                },
-                {
-                  title: "May All Beings Be Happy",
-                  img: happyImg,
-                  url: "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736",
-                  desc: "Dharma sayings of Master Beopjeong",
-                },
-                {
-                  title: "Hyecho's Memoirs of a Pilgrimage to the Five Indian Kingdoms",
-                  img: hyechoImg,
-                  url: "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35",
-                  desc: "in *Accounts of a Pilgrimage, Monuments, and Eminent Monks*",
-                },
-              ].map(({ title, img, url, desc }, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <div className="w-[220px] aspect-[3/4] relative">
-                    <Image
-                      src={img}
-                      alt={title}
-                      fill
-                      className="object-contain rounded shadow"
-                    />
-                  </div>
-                  <div className="text-center mt-3 min-h-[96px]">
+        {/* Top deck — three sections side-by-side */}
+        <section className="max-w-6xl mx-auto px-4 py-6 md:py-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Books */}
+            <div>
+              <h2 className="text-xl font-semibold mb-3">Books</h2>
+              <ul className="space-y-4">
+                {books.map(({ title, img, url, desc }, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="relative w-16 h-22 md:w-20 md:h-28 shrink-0">
+                      <Image
+                        src={img}
+                        alt={title}
+                        fill
+                        className="object-contain rounded shadow"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <a
+                        href={url}
+                        target="_blank"
+                        className="text-indigo-600 font-medium hover:underline block truncate"
+                      >
+                        {title}
+                      </a>
+                      <p
+                        className="text-sm text-gray-600"
+                        dangerouslySetInnerHTML={{
+                          __html: desc.replace(/\*(.*?)\*/g, '<em>$1</em>'),
+                        }}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Courses */}
+            <div>
+              <h2 className="text-xl font-semibold mb-3">Courses</h2>
+              <ul className="grid grid-cols-2 gap-3">
+                {courses.slice(0, 4).map(({ title, ko, img, url }, i) => (
+                  <li key={i}>
                     <a
                       href={url}
-                      className="text-indigo-600 text-lg md:text-xl font-semibold underline hover:text-indigo-800"
                       target="_blank"
-                      rel="noreferrer"
+                      className="block rounded-lg border border-gray-200 hover:shadow-sm transition"
                     >
-                      {title}
+                      <div className="relative w-full h-20 rounded-t-lg overflow-hidden">
+                        <Image src={img} alt={title} fill className="object-cover" />
+                      </div>
+                      <div className="p-2">
+                        <p className="text-sm font-medium leading-tight line-clamp-2">
+                          {title}
+                        </p>
+                        <p className="text-xs text-gray-600">{ko}</p>
+                      </div>
                     </a>
-                    <p
-                      className="text-sm mt-1"
-                      dangerouslySetInnerHTML={{ __html: desc.replace(/\*(.*?)\*/g, "<em>$1</em>") }}
-                    />
-                  </div>
-                </div>
-              ))}
+                  </li>
+                ))}
+              </ul>
+              {courses.length > 4 && (
+                <p className="mt-2 text-xs text-gray-500">
+                  + {courses.length - 4} more courses available
+                </p>
+              )}
+            </div>
+
+            {/* Academic Work */}
+            <div>
+              <h2 className="text-xl font-semibold mb-3">Academic Work</h2>
+              <div className="rounded-lg border border-gray-200 p-3">
+                <p className="font-medium text-sm">{academic.title}</p>
+                <p className="text-sm text-gray-700">{academic.by}</p>
+                <p className="text-xs text-gray-600 mt-1">{academic.journal}</p>
+              </div>
+              {/* If you want to add more items later, convert this to a list */}
             </div>
           </div>
         </section>
 
-        {/* Courses — compact */}
-        <section className="py-10 px-6 bg-blue-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Courses</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {[
-                {
-                  title: "Buddhist Beliefs in Korea",
-                  korean: "한국의 불교 신앙",
-                  img: beliefsImg,
-                  url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
-                },
-                {
-                  title: "Daily Life and Disciplines of Korean Monasteries",
-                  korean: "한국사찰의 일상과 규범",
-                  img: monasteriesImg,
-                  url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
-                },
-                {
-                  title: "Korean Buddhist Literature",
-                  korean: "한국의 불교문학",
-                  img: literatureImg,
-                  url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
-                },
-                {
-                  title: "History and Culture of Sŏn",
-                  korean: "선의 역사와 문화",
-                  img: songImg,
-                  url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
-                },
-                {
-                  title: "Korean Buddhism and Business",
-                  korean: "한국불교와 비즈니스",
-                  img: businessImg,
-                  url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
-                },
-              ].map(({ title, korean, img, url }, idx) => (
-                <a
-                  key={idx}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition block"
-                >
-                  <Image src={img} alt={title} className="w-full h-36 md:h-40 object-cover" />
-                  <div className="p-3 space-y-0.5">
-                    <h3 className="font-semibold text-base md:text-lg">{title}</h3>
-                    <p className="text-xs md:text-sm text-gray-600">{korean}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Academic Work — compact */}
-        <section className="py-12 px-6 bg-white">
-          <div className="max-w-4xl mx-auto text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-semibold">Academic Work</h2>
-            <div className="text-base md:text-lg text-gray-700 leading-relaxed">
-              <p>
-                <strong>
-                  The Activities and Significance of Temple Fraternities in Late
-                  Chosŏn Buddhism
-                </strong>
-              </p>
-              <p>Sangkil Han, Matty Wegehaupt</p>
-              <p>
-                <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
-              </p>
-              <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
-            </div>
-          </div>
-        </section>
-
-        <footer className="py-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Banglangdang Translations
+        {/* (Optional) Minimal footer */}
+        <footer className="text-center text-xs text-gray-500 py-4">
+          © {new Date().getFullYear()} Matty Wegehaupt
         </footer>
       </main>
     </>
