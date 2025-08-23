@@ -1,48 +1,25 @@
+// app/page.tsx
 import Head from "next/head";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Matty Wegehaupt | Banglangdang Translations</title>
-        <meta
-          name="description"
-          content="Translation, Editing, and Collaboration in Korean/English Buddhist work"
-        />
-      </Head>
-      <main className="min-h-screen bg-white text-gray-800 font-sans">
-        {/* Hero */}
-        <section className="relative h-[45vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/Tripitaka_Koreana_02.jpeg"
-            alt="Tripitaka Koreana woodblocks at Haeinsa"
-            fill
-            priority
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center px-4 max-w-xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Matty Wegehaupt (오상진)
-            </h1>
-            <p className="text-base md:text-lg text-gray-200 mb-6">
-              Translation, Editing, and Collaboration in Korean/English Buddhist work
-            </p>
-            <a
-              href="mailto:omatty@gmail.com"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-6 rounded-lg transition"
-            >
-              Contact Me
-            </a>
-          </div>
-        </section>
+// HERO
+import heroImg from "/public/Tripitaka_Koreana_02.jpeg";
 
-        {/* 3-column content */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            import Head from "next/head";
-import Image from "next/image";
+// BOOKS
+import pureImg from "/public/malgohyangi.png";
+import happyImg from "/public/mabbh.jpg";
+import hyechoImg from "/public/hyecho.png";
+
+// COURSES (thumbs)
+import beliefsImg from "/public/beliefs.png";
+import monasteriesImg from "/public/monasteries.png";
+import literatureImg from "/public/literature.png";
+import songImg from "/public/song.png";
+import businessImg from "/public/business.png";
+
+// ACADEMIC + CURRENT WORK
+import museShot from "/public/SangilHan.jpg";
+import montafonCover from "/public/Montafonmoonlight.jpg";
 
 export default function Home() {
   return (
@@ -54,361 +31,228 @@ export default function Home() {
           content="Translation, Editing, and Collaboration in Korean/English Buddhist work"
         />
       </Head>
+
       <main className="min-h-screen bg-white text-gray-800 font-sans">
-        {/* Hero */}
-        <section className="relative h-[45vh] flex items-center justify-center overflow-hidden">
+        {/* Hero — short */}
+        <section className="relative h-[42vh] md:h-[38vh] flex items-center justify-center overflow-hidden">
           <Image
-            src="/Tripitaka_Koreana_02.jpeg"
-            alt="Tripitaka Koreana woodblocks at Haeinsa"
+            src={heroImg}
+            alt="Tripitaka Koreana library hall"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center px-4 max-w-xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 text-center px-4 max-w-2xl">
+            <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
               Matty Wegehaupt (오상진)
             </h1>
-            <p className="text-base md:text-lg text-gray-200 mb-6">
-              Translation, Editing, and Collaboration in Korean/English Buddhist work
+            <p className="text-sm md:text-base text-gray-200 mt-2">
+              Translation, Editing, and Collaboration in Korean/English
+              Buddhist work
             </p>
             <a
               href="mailto:omatty@gmail.com"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-6 rounded-lg transition"
+              className="inline-block mt-5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 px-5 rounded-lg transition"
             >
               Contact Me
             </a>
           </div>
         </section>
 
-        {/* 3-column content */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            {/* Books */}
-            <div>
+        {/* Three compact columns */}
+        <section className="py-10 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+            {/* COLUMN 1 — BOOKS */}
+            <div className="mx-auto w-full max-w-[360px]">
               <h2 className="text-2xl font-semibold text-center mb-6">Books</h2>
               <div className="space-y-8">
-                <div className="flex flex-col items-center">
-                  <Image
-                    src="/malgohyangi.png"
-                    alt="Pure and Fragrant"
-                    width={180}
-                    height={240}
-                    className="rounded shadow"
-                  />
-                  <div className="text-center mt-3">
-                    <a
-                      href="https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ"
-                      className="text-indigo-600 font-semibold underline hover:text-indigo-800"
-                      target="_blank"
-                    >
-                      Pure and Fragrant
-                    </a>
-                    <p className="text-sm mt-1">
-                      Culminating work of Seon essays by Master Beopjeong
-                    </p>
+                {[
+                  {
+                    title: "Pure and Fragrant",
+                    img: pureImg,
+                    url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
+                    desc:
+                      "Culminating work of Seon essays by Master Beopjeong",
+                  },
+                  {
+                    title: "May All Beings Be Happy",
+                    img: happyImg,
+                    url:
+                      "https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736",
+                    desc: "Dharma sayings of Master Beopjeong",
+                  },
+                  {
+                    title:
+                      "Hyecho's Memoirs of a Pilgrimage to the Five Indian Kingdoms",
+                    img: hyechoImg,
+                    url:
+                      "https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35",
+                    desc:
+                      "In <em>Accounts of a Pilgrimage, Monuments, and Eminent Monks</em>",
+                  },
+                ].map(({ title, img, url, desc }, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    {/* Uniform book-thumb */}
+                    <div className="w-[120px] shrink-0">
+                      <div className="relative w-[120px] aspect-[3/4]">
+                        <Image
+                          src={img}
+                          alt={title}
+                          fill
+                          className="object-contain rounded shadow"
+                        />
+                      </div>
+                    </div>
+                    <div className="min-w-0">
+                      <a
+                        href={url}
+                        target="_blank"
+                        className="text-indigo-600 font-semibold underline hover:text-indigo-800"
+                      >
+                        {title}
+                      </a>
+                      <p
+                        className="text-sm mt-1 text-gray-700"
+                        dangerouslySetInnerHTML={{ __html: desc }}
+                      />
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <Image
-                    src="/mabbh.jpg"
-                    alt="May All Beings Be Happy"
-                    width={180}
-                    height={240}
-                    className="rounded shadow"
-                  />
-                  <div className="text-center mt-3">
-                    <a
-                      href="https://www.amazon.com/May-All-Beings-Happy-English/dp/8995757736"
-                      className="text-indigo-600 font-semibold underline hover:text-indigo-800"
-                      target="_blank"
-                    >
-                      May All Beings Be Happy
-                    </a>
-                    <p className="text-sm mt-1">
-                      Dharma sayings of Master Beopjeong
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <Image
-                    src="/hyecho.png"
-                    alt="Hyecho's Memoirs"
-                    width={180}
-                    height={240}
-                    className="rounded shadow"
-                  />
-                  <div className="text-center mt-3">
-                    <a
-                      href="https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf#page=35"
-                      className="text-indigo-600 font-semibold underline hover:text-indigo-800"
-                      target="_blank"
-                    >
-                      Hyecho&apos;s Memoirs of a Pilgrimage
-                    </a>
-                    <p className="text-sm mt-1">
-                      In <em>Accounts of a Pilgrimage, Monuments, and Eminent Monks</em>
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Courses */}
-            <div>
+            {/* COLUMN 2 — COURSES */}
+            <div className="mx-auto w-full max-w-[360px]">
               <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
-              <div className="grid grid-cols-1 gap-6">
+              <div className="space-y-5">
                 {[
                   {
                     title: "Buddhist Beliefs in Korea",
-                    korean: "한국의 불교 신앙",
-                    img: "/beliefs.png",
-                    url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
+                    kr: "한국의 불교 신앙",
+                    img: beliefsImg,
+                    url:
+                      "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
                   },
                   {
-                    title: "Daily Life and Disciplines of Korean Monasteries",
-                    korean: "한국사찰의 일상과 규범",
-                    img: "/monasteries.png",
-                    url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
+                    title:
+                      "Daily Life and Disciplines of Korean Monasteries",
+                    kr: "한국사찰의 일상과 규범",
+                    img: monasteriesImg,
+                    url:
+                      "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
                   },
                   {
                     title: "Korean Buddhist Literature",
-                    korean: "한국의 불교문학",
-                    img: "/literature.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
+                    kr: "한국의 불교문학",
+                    img: literatureImg,
+                    url:
+                      "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
                   },
                   {
                     title: "History and Culture of Sŏn",
-                    korean: "선의 역사와 문화",
-                    img: "/song.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
+                    kr: "선의 역사와 문화",
+                    img: songImg,
+                    url:
+                      "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
                   },
                   {
                     title: "Korean Buddhism and Business",
-                    korean: "한국불교와 비즈니스",
-                    img: "/business.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
+                    kr: "한국불교와 비즈니스",
+                    img: businessImg,
+                    url:
+                      "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
                   },
-                ].map(({ title, korean, img, url }, idx) => (
+                ].map(({ title, kr, img, url }, i) => (
                   <a
-                    key={idx}
+                    key={i}
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition block"
+                    className="block rounded-xl overflow-hidden border border-gray-200 hover:shadow-md transition"
                   >
-                    <Image
-                      src={img}
-                      alt={title}
-                      width={400}
-                      height={200}
-                      className="w-full object-cover"
-                    />
+                    <div className="relative w-full aspect-[16/9]">
+                      <Image src={img} alt={title} fill className="object-cover" />
+                    </div>
                     <div className="p-3">
-                      <h3 className="font-semibold text-base">{title}</h3>
-                      <p className="text-sm text-gray-600">{korean}</p>
+                      <h3 className="font-semibold text-sm">{title}</h3>
+                      <p className="text-xs text-gray-600">{kr}</p>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Academic + Current Work */}
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-2xl font-semibold text-center mb-6">
-                  Academic Work
-                </h2>
-                <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-                  <Image
-                    src="/SangilHan.jpg"
-                    alt="Temple Fraternities article"
-                    width={400}
-                    height={220}
-                    className="w-full object-cover"
-                  />
-                  <div className="p-4 text-sm text-gray-700">
-                    <p className="font-semibold">
-                      The Activities and Significance of Temple Fraternities in
-                      Late Chosŏn Buddhism
-                    </p>
-                    <p>Sangkil Han, Matty Wegehaupt</p>
-                    <p>
-                      <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
-                    </p>
-                    <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
-                    <a
-                      href="/temple-fraternities.pdf"
-                      download
-                      className="text-indigo-600 underline hover:text-indigo-800"
-                    >
-                      Download PDF
-                    </a>
-                  </div>
-                </div>
-              </div>
+            {/* COLUMN 3 — ACADEMIC + CURRENT WORK */}
+            <div className="mx-auto w-full max-w-[360px]">
+              <h2 className="text-2xl font-semibold text-center mb-6">
+                Academic Work
+              </h2>
 
-              <div>
-                <h2 className="text-2xl font-semibold text-center mb-6">
+              {/* Academic card with image + direct PDF download */}
+              <a
+                href="/temple-fraternities.pdf"
+                download
+                className="block rounded-xl overflow-hidden border border-gray-200 hover:shadow-md transition"
+                title="Download PDF"
+              >
+                <div className="relative w-full aspect-[16/9] bg-white">
+                  <Image
+                    src={museShot}
+                    alt="Project MUSE article screenshot"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3">
+                  <h3 className="font-semibold text-sm">
+                    The Activities and Significance of Temple Fraternities in
+                    Late Chosŏn Buddhism
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Sangkil Han, Matty Wegehaupt — Journal of Korean Religions,
+                    University of Hawaiʻi Press
+                  </p>
+                </div>
+              </a>
+
+              {/* Current Work */}
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold text-center mb-3">
                   Current Work
-                </h2>
-                <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-                  <Image
-                    src="/Montafonmoonlight.jpg"
-                    alt="Montafon Moonlight cover"
-                    width={400}
-                    height={220}
-                    className="w-full object-cover"
-                  />
-                  <div className="p-4 text-sm text-gray-700 text-center">
-                    <p className="font-semibold">Serialized Novel</p>
-                    <a
-                      href="https://omatty123.github.io/MontafonMoonlight/"
-                      target="_blank"
-                      className="text-indigo-600 underline hover:text-indigo-800"
-                    >
-                      Montafon Moonlight by Jeong Chanju
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+                </h3>
 
-        <footer className="text-center py-6 text-gray-500 text-sm">
-          © {new Date().getFullYear()} Matty Wegehaupt
-        </footer>
-      </main>
-    </>
-  );
-}
-
-            {/* Courses */}
-            <div>
-              <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
-              <div className="grid grid-cols-1 gap-6">
-                {[
-                  {
-                    title: "Buddhist Beliefs in Korea",
-                    korean: "한국의 불교 신앙",
-                    img: "/beliefs.png",
-                    url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
-                  },
-                  {
-                    title: "Daily Life and Disciplines of Korean Monasteries",
-                    korean: "한국사찰의 일상과 규범",
-                    img: "/monasteries.png",
-                    url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
-                  },
-                  {
-                    title: "Korean Buddhist Literature",
-                    korean: "한국의 불교문학",
-                    img: "/literature.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
-                  },
-                  {
-                    title: "History and Culture of Sŏn",
-                    korean: "선의 역사와 문화",
-                    img: "/song.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
-                  },
-                  {
-                    title: "Korean Buddhism and Business",
-                    korean: "한국불교와 비즈니스",
-                    img: "/business.png",
-                    url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
-                  },
-                ].map(({ title, korean, img, url }, idx) => (
-                  <a
-                    key={idx}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition block"
-                  >
+                <a
+                  href="https://omatty123.github.io/MontafonMoonlight/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-xl overflow-hidden border border-gray-200 hover:shadow-md transition"
+                >
+                  <div className="relative w-full aspect-[3/4] bg-white">
                     <Image
-                      src={img}
-                      alt={title}
-                      width={400}
-                      height={200}
-                      className="w-full object-cover"
+                      src={montafonCover}
+                      alt="Montafon Moonlight cover"
+                      fill
+                      className="object-cover"
                     />
-                    <div className="p-3">
-                      <h3 className="font-semibold text-base">{title}</h3>
-                      <p className="text-sm text-gray-600">{korean}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Academic + Current Work */}
-            <div className="space-y-12">
-              <div>
-                <h2 className="text-2xl font-semibold text-center mb-6">
-                  Academic Work
-                </h2>
-                <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-                  <Image
-                    src="/SangilHan.jpg"
-                    alt="Temple Fraternities article"
-                    width={400}
-                    height={220}
-                    className="w-full object-cover"
-                  />
-                  <div className="p-4 text-sm text-gray-700">
-                    <p className="font-semibold">
-                      The Activities and Significance of Temple Fraternities in
-                      Late Chosŏn Buddhism
-                    </p>
-                    <p>Sangkil Han, Matty Wegehaupt</p>
-                    <p>
-                      <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
-                    </p>
-                    <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
-                    <a
-                      href="/temple-fraternities.pdf"
-                      download
-                      className="text-indigo-600 underline hover:text-indigo-800"
-                    >
-                      Download PDF
-                    </a>
                   </div>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-semibold text-center mb-6">
-                  Current Work
-                </h2>
-                <div className="bg-white rounded-xl shadow hover:shadow-md transition overflow-hidden">
-                  <Image
-                    src="/Montafonmoonlight.jpg"
-                    alt="Montafon Moonlight cover"
-                    width={400}
-                    height={220}
-                    className="w-full object-cover"
-                  />
-                  <div className="p-4 text-sm text-gray-700 text-center">
-                    <p className="font-semibold">Serialized Novel</p>
-                    <a
-                      href="https://omatty123.github.io/MontafonMoonlight/"
-                      target="_blank"
-                      className="text-indigo-600 underline hover:text-indigo-800"
-                    >
-                      Montafon Moonlight by Jeong Chanju
-                    </a>
+                  <div className="p-3 text-center">
+                    <p className="text-xs uppercase tracking-wide text-gray-500">
+                      Serialized Novel
+                    </p>
+                    <h4 className="font-semibold text-sm mt-1">
+                      Montafon Moonlight — Jeong Chanju
+                    </h4>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <footer className="text-center py-6 text-gray-500 text-sm">
+        {/* Footer */}
+        <footer className="py-8 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Matty Wegehaupt
         </footer>
       </main>
