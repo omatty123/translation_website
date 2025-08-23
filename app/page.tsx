@@ -123,10 +123,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* COLUMN 2 — COURSES */}
-<div className="mx-auto w-full max-w-[360px]">
+            {/* COLUMN 2 — COURSES (compact media list) */}
+<div className="mx-auto w-full max-w-[420px]">
   <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
-  <div className="space-y-5">
+
+  <ul className="space-y-3">
     {[
       {
         title: "Buddhist Beliefs in Korea",
@@ -159,24 +160,34 @@ export default function Home() {
         url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
       },
     ].map(({ title, kr, img, url }, i) => (
-      <a
-        key={i}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition"
-      >
-        {/* Smaller thumbnail ratio */}
-        <div className="relative w-full aspect-[4/3]">
-          <Image src={img} alt={title} fill className="object-cover" />
-        </div>
-        <div className="p-3">
-          <h3 className="font-semibold text-sm">{title}</h3>
-          <p className="text-xs text-gray-600">{kr}</p>
-        </div>
-      </a>
+      <li key={i}>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 hover:shadow-md transition"
+        >
+          {/* fixed, consistent thumbnail */}
+          <div className="shrink-0 rounded-md overflow-hidden">
+            <Image
+              src={img}
+              alt={title}
+              width={128}     // ~128x80 keeps a tidy 16:10
+              height={80}
+              className="object-cover"
+            />
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="font-semibold text-sm leading-snug group-hover:underline line-clamp-2">
+              {title}
+            </h3>
+            <p className="text-xs text-gray-600 mt-0.5">{kr}</p>
+          </div>
+        </a>
+      </li>
     ))}
-  </div>
+  </ul>
 </div>
 
             {/* COLUMN 3 — ACADEMIC + CURRENT WORK */}
