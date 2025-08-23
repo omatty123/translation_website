@@ -204,7 +204,7 @@ export default function Home() {
                 </p>
                 <div className="mt-3">
                   <a
-                    href="https://muse.jhu.edu/pub/5/article/476919/pdf" // PDF link
+                    href="https://github.com/omatty123/translation_website/blob/main/public/temple-fraternities.pdf" // PDF link
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-indigo-600 hover:underline text-sm font-medium"
