@@ -22,26 +22,25 @@ export default function Home() {
       </Head>
       <main className="min-h-screen bg-white text-gray-800 font-sans">
         {/* Hero */}
-        <section className="relative h-[80vh] md:h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
           <Image
             src={hanokBg}
             alt="Traditional Hanok ondol floor"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            fill
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 text-center px-4 max-w-xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
               Matty Wegehaupt (오상진)
             </h1>
-            <p className="text-base md:text-lg text-gray-200 mb-6">
+            <p className="text-base md:text-lg text-gray-200 mb-5">
               Translation, Editing, and Collaboration in Korean/English Buddhist work
             </p>
             <a
               href="mailto:omatty@gmail.com"
-              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-3 px-6 rounded-lg transition"
+              className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium py-2.5 px-6 rounded-lg transition"
             >
               Contact Me
             </a>
@@ -172,3 +171,10 @@ export default function Home() {
                 <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
               </p>
               <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  )
+}
