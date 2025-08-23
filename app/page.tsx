@@ -54,7 +54,7 @@ export default function Home() {
             
             {/* Books */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Books</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-center">Books</h2>
               {[
                 {
                   title: "Pure and Fragrant",
@@ -105,7 +105,7 @@ export default function Home() {
 
             {/* Courses */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Courses</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-center">Courses</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   {
@@ -158,7 +158,7 @@ export default function Home() {
 
             {/* Academic Work */}
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Academic Work</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-center">Academic Work</h2>
               <div className="p-4 border rounded-lg bg-gray-50 text-sm leading-relaxed space-y-1">
                 <p>
                   <strong>
