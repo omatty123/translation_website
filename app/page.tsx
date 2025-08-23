@@ -156,28 +156,49 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Academic Work */}
-            <div>
-              <h2 className="text-2xl font-semibold mb-6 text-center">Academic Work</h2>
-              <div className="p-4 border rounded-lg bg-gray-50 text-sm leading-relaxed space-y-1">
-                <p>
-                  <strong>
-                    The Activities and Significance of Temple Fraternities in Late
-                    Chosŏn Buddhism
-                  </strong>
-                </p>
-                <p>Sangkil Han, Matty Wegehaupt</p>
-                <p>
-                  <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
-                </p>
-                <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
-                <a
-                  href="/temple-fraternities.pdf"
-                  download
-                  className="inline-block mt-2 text-indigo-600 hover:underline font-medium"
-                >
-                  Download PDF
-                </a>
+            {/* Academic Work + Current Work */}
+            <div className="space-y-8">
+              {/* Academic Work */}
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-center">Academic Work</h2>
+                <div className="p-4 border rounded-lg bg-gray-50 text-sm leading-relaxed space-y-1">
+                  <p>
+                    <strong>
+                      The Activities and Significance of Temple Fraternities in Late
+                      Chosŏn Buddhism
+                    </strong>
+                  </p>
+                  <p>Sangkil Han, Matty Wegehaupt</p>
+                  <p>
+                    <em>Journal of Korean Religions</em>, University of Hawaiʻi Press
+                  </p>
+                  <p>Volume 3, Number 1, April 2012, pp. 29–63</p>
+                  <a
+                    href="/temple-fraternities.pdf"
+                    download
+                    className="inline-block mt-2 text-indigo-600 hover:underline font-medium"
+                  >
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+
+              {/* Current Work */}
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-center">Current Work</h2>
+                <div className="p-4 border rounded-lg bg-gray-50 text-sm leading-relaxed">
+                  <p>
+                    <strong>Serialized Novel: Montafon Moonlight</strong> by Jeong Chanju
+                  </p>
+                  <a
+                    href="https://omatty123.github.io/MontafonMoonlight/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-indigo-600 hover:underline font-medium"
+                  >
+                    Read Online
+                  </a>
+                </div>
               </div>
             </div>
           </div>
