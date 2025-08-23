@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-// Images (unchanged paths)
+// Images
 import hanokBg from '/public/Hanok-Ondol-room-maru-floor.jpg'
 import beliefsImg from '/public/beliefs.png'
 import monasteriesImg from '/public/monasteries.png'
@@ -68,13 +68,15 @@ export default function Home() {
     },
   ]
 
-  const academic = {
-    title:
-      'The Activities and Significance of Temple Fraternities in Late Chosŏn Buddhism',
-    by: 'Sangkil Han, Matty Wegehaupt',
-    journal:
-      'Journal of Korean Religions, University of Hawaiʻi Press — Volume 3, Number 1, April 2012, pp. 29–63',
-  }
+  const academic = [
+    {
+      title:
+        'The Activities and Significance of Temple Fraternities in Late Chosŏn Buddhism',
+      by: 'Sangkil Han, Matty Wegehaupt',
+      journal:
+        'Journal of Korean Religions, University of Hawaiʻi Press — Volume 3, Number 1, April 2012, pp. 29–63',
+    },
+  ]
 
   return (
     <>
@@ -87,7 +89,7 @@ export default function Home() {
       </Head>
 
       <main className="bg-white text-gray-800 font-sans">
-        {/* Slim hero */}
+        {/* Slim Hero */}
         <section className="relative h-40 md:h-48 flex items-center justify-center overflow-hidden">
           <Image
             src={hanokBg}
@@ -113,37 +115,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Top deck — three sections side-by-side */}
-        <section className="max-w-6xl mx-auto px-4 py-6 md:py-8">
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+        {/* Three Columns */}
+        <section className="max-w-6xl mx-auto px-4 py-8 md:py-12">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Books */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Books</h2>
-              <ul className="space-y-4">
+              <h2 className="text-xl font-semibold mb-4">Books</h2>
+              <ul className="space-y-6">
                 {books.map(({ title, img, url, desc }, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="relative w-16 h-22 md:w-20 md:h-28 shrink-0">
-                      <Image
-                        src={img}
-                        alt={title}
-                        fill
-                        className="object-contain rounded shadow"
-                      />
-                    </div>
-                    <div className="min-w-0">
-                      <a
-                        href={url}
-                        target="_blank"
-                        className="text-indigo-600 font-medium hover:underline block truncate"
-                      >
-                        {title}
-                      </a>
-                      <p
-                        className="text-sm text-gray-600"
-                        dangerouslySetInnerHTML={{
-                          __html: desc.replace(/\*(.*?)\*/g, '<em>$1</em>'),
-                        }}
-                      />
+                  <li key={i}>
+                    <div className="w-full flex flex-col items-center">
+                      <div className="w-[140px] md:w-[180px] aspect-[3/4] relative">
+                        <Image
+                          src={img}
+                          alt={title}
+                          fill
+                          className="object-contain rounded shadow"
+                        />
+                      </div>
+                      <div className="text-center mt-3">
+                        <a
+                          href={url}
+                          target="_blank"
+                          className="text-indigo-600 font-medium hover:underline"
+                        >
+                          {title}
+                        </a>
+                        <p
+                          className="text-sm text-gray-600"
+                          dangerouslySetInnerHTML={{
+                            __html: desc.replace(/\*(.*?)\*/g, '<em>$1</em>'),
+                          }}
+                        />
+                      </div>
                     </div>
                   </li>
                 ))}
@@ -152,49 +156,45 @@ export default function Home() {
 
             {/* Courses */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Courses</h2>
-              <ul className="grid grid-cols-2 gap-3">
-                {courses.slice(0, 4).map(({ title, ko, img, url }, i) => (
+              <h2 className="text-xl font-semibold mb-4">Courses</h2>
+              <ul className="space-y-4">
+                {courses.map(({ title, ko, img, url }, i) => (
                   <li key={i}>
                     <a
                       href={url}
                       target="_blank"
-                      className="block rounded-lg border border-gray-200 hover:shadow-sm transition"
+                      rel="noopener noreferrer"
+                      className="block rounded-lg border border-gray-200 hover:shadow transition"
                     >
-                      <div className="relative w-full h-20 rounded-t-lg overflow-hidden">
+                      <div className="relative w-full h-28 rounded-t-lg overflow-hidden">
                         <Image src={img} alt={title} fill className="object-cover" />
                       </div>
-                      <div className="p-2">
-                        <p className="text-sm font-medium leading-tight line-clamp-2">
-                          {title}
-                        </p>
+                      <div className="p-3">
+                        <p className="text-sm font-medium">{title}</p>
                         <p className="text-xs text-gray-600">{ko}</p>
                       </div>
                     </a>
                   </li>
                 ))}
               </ul>
-              {courses.length > 4 && (
-                <p className="mt-2 text-xs text-gray-500">
-                  + {courses.length - 4} more courses available
-                </p>
-              )}
             </div>
 
-            {/* Academic Work */}
+            {/* Academic */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Academic Work</h2>
-              <div className="rounded-lg border border-gray-200 p-3">
-                <p className="font-medium text-sm">{academic.title}</p>
-                <p className="text-sm text-gray-700">{academic.by}</p>
-                <p className="text-xs text-gray-600 mt-1">{academic.journal}</p>
-              </div>
-              {/* If you want to add more items later, convert this to a list */}
+              <h2 className="text-xl font-semibold mb-4">Academic Work</h2>
+              <ul className="space-y-6">
+                {academic.map(({ title, by, journal }, i) => (
+                  <li key={i} className="rounded-lg border border-gray-200 p-4">
+                    <p className="font-medium text-sm">{title}</p>
+                    <p className="text-sm text-gray-700">{by}</p>
+                    <p className="text-xs text-gray-600 mt-1">{journal}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* (Optional) Minimal footer */}
         <footer className="text-center text-xs text-gray-500 py-4">
           © {new Date().getFullYear()} Matty Wegehaupt
         </footer>
