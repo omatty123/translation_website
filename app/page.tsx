@@ -22,8 +22,8 @@ export default function Home() {
       </Head>
 
       <main className="min-h-screen bg-white text-gray-800 font-sans">
-        {/* Hero (shorter) */}
-        <section className="relative h-[44vh] md:h-[52vh] flex items-center justify-center overflow-hidden">
+        {/* Hero — intentionally small: ~224–288px tall */}
+        <section className="relative h-56 md:h-72 flex items-center justify-center overflow-hidden">
           <Image
             src={hanokBg}
             alt="Traditional Hanok ondol floor"
@@ -37,7 +37,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 leading-tight tracking-tight">
               Matty Wegehaupt (오상진)
             </h1>
-            <p className="text-sm md:text-base text-gray-200 mb-4">
+            <p className="text-sm md:text-base text-gray-200 mb-3">
               Translation, Editing, and Collaboration in Korean/English Buddhist work
             </p>
             <a
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Books (more compact) */}
+        {/* Books — compact */}
         <section className="py-10 px-6 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Books</h2>
@@ -75,7 +75,7 @@ export default function Home() {
                 },
               ].map(({ title, img, url, desc }, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <div className="w-[240px] aspect-[3/4] relative">
+                  <div className="w-[220px] aspect-[3/4] relative">
                     <Image
                       src={img}
                       alt={title}
@@ -83,7 +83,7 @@ export default function Home() {
                       className="object-contain rounded shadow"
                     />
                   </div>
-                  <div className="text-center mt-3 min-h-[104px]">
+                  <div className="text-center mt-3 min-h-[96px]">
                     <a
                       href={url}
                       className="text-indigo-600 text-lg md:text-xl font-semibold underline hover:text-indigo-800"
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Courses (more compact) */}
+        {/* Courses — compact */}
         <section className="py-10 px-6 bg-blue-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Courses</h2>
@@ -147,7 +147,6 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="bg-white rounded-xl overflow-hidden shadow hover:shadow-md transition block"
                 >
-                  {/* shorter image */}
                   <Image src={img} alt={title} className="w-full h-36 md:h-40 object-cover" />
                   <div className="p-3 space-y-0.5">
                     <h3 className="font-semibold text-base md:text-lg">{title}</h3>
@@ -159,7 +158,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Academic Work (compact) */}
+        {/* Academic Work — compact */}
         <section className="py-12 px-6 bg-white">
           <div className="max-w-4xl mx-auto text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold">Academic Work</h2>
@@ -179,7 +178,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
         <footer className="py-8 text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Banglangdang Translations
         </footer>
