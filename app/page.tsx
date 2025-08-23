@@ -32,9 +32,9 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 text-center px-4 max-w-xl">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
-              Matty Wegehaupt (오상진)
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 break-keep text-balance">
+  Matty Wegehaupt <span className="whitespace-nowrap">(오상진)</span>
+</h1>
             <p className="text-base md:text-lg text-gray-200 mb-5">
               Translation, Editing, and Collaboration in Korean/English Buddhist work
             </p>
@@ -57,7 +57,7 @@ export default function Home() {
                   title: "Pure and Fragrant",
                   img: pureImg,
                   url: "https://books.google.com/books/about/Pure_and_Fragrant.html?id=qQ_qEAAAQBAJ",
-                  desc: "Culminating work of Seon essays by Master Beopjeong",
+                  desc: "Prose anthology of Master Beopjeong",
                 },
                 {
                   title: "May All Beings Be Happy",
