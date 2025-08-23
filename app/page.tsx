@@ -81,7 +81,7 @@ export default function Home() {
                       Pure and Fragrant
                     </a>
                     <p className="text-sm mt-1">
-                      Culminating work of Seon essays by Master Beopjeong
+                      Essay anthology of Master Beopjeong
                     </p>
                   </div>
                 </div>
