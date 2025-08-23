@@ -124,65 +124,60 @@ export default function Home() {
             </div>
 
             {/* COLUMN 2 — COURSES */}
-            <div className="mx-auto w-full max-w-[360px]">
-              <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
-              <div className="space-y-5">
-                {[
-                  {
-                    title: "Buddhist Beliefs in Korea",
-                    kr: "한국의 불교 신앙",
-                    img: beliefsImg,
-                    url:
-                      "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
-                  },
-                  {
-                    title:
-                      "Daily Life and Disciplines of Korean Monasteries",
-                    kr: "한국사찰의 일상과 규범",
-                    img: monasteriesImg,
-                    url:
-                      "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
-                  },
-                  {
-                    title: "Korean Buddhist Literature",
-                    kr: "한국의 불교문학",
-                    img: literatureImg,
-                    url:
-                      "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
-                  },
-                  {
-                    title: "History and Culture of Sŏn",
-                    kr: "선의 역사와 문화",
-                    img: songImg,
-                    url:
-                      "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
-                  },
-                  {
-                    title: "Korean Buddhism and Business",
-                    kr: "한국불교와 비즈니스",
-                    img: businessImg,
-                    url:
-                      "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
-                  },
-                ].map(({ title, kr, img, url }, i) => (
-                  <a
-                    key={i}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-xl overflow-hidden border border-gray-200 hover:shadow-md transition"
-                  >
-                    <div className="relative w-full aspect-[16/9]">
-                      <Image src={img} alt={title} fill className="object-cover" />
-                    </div>
-                    <div className="p-3">
-                      <h3 className="font-semibold text-sm">{title}</h3>
-                      <p className="text-xs text-gray-600">{kr}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
+<div className="mx-auto w-full max-w-[360px]">
+  <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
+  <div className="space-y-5">
+    {[
+      {
+        title: "Buddhist Beliefs in Korea",
+        kr: "한국의 불교 신앙",
+        img: beliefsImg,
+        url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
+      },
+      {
+        title: "Daily Life and Disciplines of Korean Monasteries",
+        kr: "한국사찰의 일상과 규범",
+        img: monasteriesImg,
+        url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
+      },
+      {
+        title: "Korean Buddhist Literature",
+        kr: "한국의 불교문학",
+        img: literatureImg,
+        url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
+      },
+      {
+        title: "History and Culture of Sŏn",
+        kr: "선의 역사와 문화",
+        img: songImg,
+        url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
+      },
+      {
+        title: "Korean Buddhism and Business",
+        kr: "한국불교와 비즈니스",
+        img: businessImg,
+        url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
+      },
+    ].map(({ title, kr, img, url }, i) => (
+      <a
+        key={i}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition"
+      >
+        {/* Smaller thumbnail ratio */}
+        <div className="relative w-full aspect-[4/3]">
+          <Image src={img} alt={title} fill className="object-cover" />
+        </div>
+        <div className="p-3">
+          <h3 className="font-semibold text-sm">{title}</h3>
+          <p className="text-xs text-gray-600">{kr}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
 
             {/* COLUMN 3 — ACADEMIC + CURRENT WORK */}
             <div className="mx-auto w-full max-w-[360px]">
