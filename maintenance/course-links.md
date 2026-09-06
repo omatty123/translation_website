@@ -12,6 +12,10 @@ Checked September 6, 2026 against the official K-MOOC course pages.
 
 The old links return HTTP 200 but contain a Course Access Notice and a redirect to the homepage, rather than a course page. A status-only link checker will miss this failure. Confirm the expected Korean course title in the page content as well as the response status.
 
-The replacement pages identify Dongguk University's K-Academic Expansion institute as the operator and list course operation through December 31, 2026. Future offerings may have different IDs; search the exact Korean title on K-MOOC when updating. Remove obsolete tracking parameters. Update the visible checked date only after verifying all five pages.
+The replacement pages identify Dongguk University's K-Academic Expansion institute as the operator and list course operation through December 31, 2026. Future offerings may have different IDs; search the exact Korean title on K-MOOC when updating. Remove obsolete tracking parameters. Update the visible checked date only after verifying all six linked pages.
 
-The old screenshot thumbnails contained 2025 dates, so the course list now uses readable bilingual text and explicit destination labels. Original image assets remain in the repository.
+The course panel uses square thumbnails of the official course artwork, alongside readable bilingual titles. Original screenshot assets remain in the repository.
+
+Buddhist Ethics and Modern Society (불교윤리와 현대사회) was added with the verified current page https://www.kmooc.kr/view/course/detail/19663.
+
+The portfolio lists seven course translations. Six have verified public pages. Travel and Buddhism in Chosŏn and the Modern Era (조선과 근대의 여행과 불교) has no verified public course page as of this check; it is listed without an enrollment link or invented course artwork. Both pages of Dongguk’s 40-course catalog were inspected: https://www.kmooc.kr/view/course/institution/kaep_dongguk. Private correspondence and working documents are not published in this repository.

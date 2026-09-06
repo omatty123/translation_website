@@ -37,3 +37,51 @@ a:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* A single framed collection, with square course artwork. */
+.course-panel {
+  border: 1px solid #dcdce9;
+  border-radius: 16px;
+  background: #fafafe;
+}
+.course-panel-header {
+  padding: 22px 20px 20px;
+  border-radius: 15px 15px 0 0;
+  background: #302b61;
+  color: #fff;
+}
+.course-panel-header p { margin-top: 6px; color: #dfddef; font-size: 13px; }
+.course-count { font-size: 12px; color: #e7e5f5; white-space: nowrap; }
+.course-list { padding: 4px 16px; }
+.course-list li + li { border-top: 1px solid #e3e2ee; }
+.course-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 4px;
+  transition: background-color 160ms ease-out;
+  border-radius: 4px;
+}
+.course-link:hover { background: #eeedf8; }
+.course-link:focus-visible { outline-offset: 0; }
+.course-thumbnail {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e8e4de;
+}
+.course-action { display: inline-flex; align-items: center; gap: 4px; margin-top: 7px; font-size: 12px; font-weight: 500; color: #4b3da0; }
+.course-pending { margin: 0 20px; padding: 18px 0; border-top: 1px solid #dcdce9; color: #514e68; }
+.course-panel-footer { padding: 15px 20px 18px; border-top: 1px solid #dcdce9; font-size: 11px; line-height: 1.6; color: #615e75; }
+.course-panel-footer a { display: inline-block; padding: 6px 0; color: #4b3da0; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .course-list { padding-inline: 10px; }
+  .course-link { gap: 10px; }
+  .course-thumbnail { width: 60px; height: 60px; flex-basis: 60px; }
+  .course-panel-header { padding-inline: 14px; }
+  .course-count { font-size: 10px; }
+}
