@@ -10,13 +10,6 @@ import pureImg from "/public/malgohyangi.png";
 import happyImg from "/public/mabbh.jpg";
 import hyechoImg from "/public/hyecho.png";
 
-// COURSES (thumbs)
-import beliefsImg from "/public/beliefs.png";
-import monasteriesImg from "/public/monasteries.png";
-import literatureImg from "/public/literature.png";
-import songImg from "/public/song.png";
-import businessImg from "/public/business.png";
-
 // ACADEMIC + CURRENT WORK
 import museShot from "/public/SangilHan.jpg";
 import montafonCover from "/public/Montafonmoonlight.jpg";
@@ -123,72 +116,67 @@ export default function Home() {
               </div>
             </div>
 
-            {/* COLUMN 2 — COURSES (compact media list) */}
-<div className="mx-auto w-full max-w-[420px]">
-  <h2 className="text-2xl font-semibold text-center mb-6">Courses</h2>
-
-  <ul className="space-y-3">
-    {[
-      {
-        title: "Buddhist Beliefs in Korea",
-        kr: "한국의 불교 신앙",
-        img: beliefsImg,
-        url: "https://www.kmooc.kr/view/course/detail/15060?tm=20250413071136",
-      },
-      {
-        title: "Daily Life and Disciplines of Korean Monasteries",
-        kr: "한국사찰의 일상과 규범",
-        img: monasteriesImg,
-        url: "https://www.kmooc.kr/view/course/detail/15064?tm=20250413074914",
-      },
-      {
-        title: "Korean Buddhist Literature",
-        kr: "한국의 불교문학",
-        img: literatureImg,
-        url: "https://www.kmooc.kr/view/course/detail/13246?tm=20250413071115",
-      },
-      {
-        title: "History and Culture of Sŏn",
-        kr: "선의 역사와 문화",
-        img: songImg,
-        url: "https://www.kmooc.kr/view/course/detail/13251?tm=20250413074824",
-      },
-      {
-        title: "Korean Buddhism and Business",
-        kr: "한국불교와 비즈니스",
-        img: businessImg,
-        url: "https://www.kmooc.kr/view/course/detail/13254?tm=20250413071035",
-      },
-    ].map(({ title, kr, img, url }, i) => (
-      <li key={i}>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-3 hover:shadow-md transition"
-        >
-          {/* fixed, consistent thumbnail */}
-          <div className="shrink-0 rounded-md overflow-hidden">
-            <Image
-              src={img}
-              alt={title}
-              width={128}     // ~128x80 keeps a tidy 16:10
-              height={80}
-              className="object-cover"
-            />
-          </div>
-
-          <div className="min-w-0">
-            <h3 className="font-semibold text-sm leading-snug group-hover:underline line-clamp-2">
-              {title}
-            </h3>
-            <p className="text-xs text-gray-600 mt-0.5">{kr}</p>
-          </div>
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
+            {/* COLUMN 2 — COURSES */}
+            <section aria-labelledby="courses-heading" className="mx-auto w-full max-w-[420px]">
+              <h2 id="courses-heading" className="text-2xl font-semibold text-center mb-2">Courses</h2>
+              <p className="text-sm text-gray-600 text-center mb-6">
+                Dongguk University · K-MOOC<br />
+                2026 offerings · Links checked September 6, 2026
+              </p>
+              <ul className="divide-y divide-gray-200 border-y border-gray-200">
+                {[
+                  {
+                    title: "Buddhist Beliefs in Korea",
+                    kr: "한국의 불교 신앙",
+                    url: "https://www.kmooc.kr/view/course/detail/18434",
+                  },
+                  {
+                    title: "Daily Life and Disciplines of Korean Monasteries",
+                    kr: "한국사찰의 일상과 규범",
+                    url: "https://www.kmooc.kr/view/course/detail/18438",
+                  },
+                  {
+                    title: "Korean Buddhist Literature",
+                    kr: "한국의 불교문학",
+                    url: "https://www.kmooc.kr/view/course/detail/18442",
+                  },
+                  {
+                    title: "History and Culture of Sŏn",
+                    kr: "선의 역사와 문화",
+                    url: "https://www.kmooc.kr/view/course/detail/18446",
+                  },
+                  {
+                    title: "Korean Buddhism and Business",
+                    kr: "한국불교와 비즈니스",
+                    url: "https://www.kmooc.kr/view/course/detail/18449",
+                  },
+                ].map(({ title, kr, url }) => (
+                  <li key={url}>
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block py-4 px-2 -mx-2 hover:bg-indigo-50 transition-colors"
+                    >
+                      <h3 className="font-semibold text-base leading-snug group-hover:underline">{title}</h3>
+                      <p lang="ko" className="text-sm text-gray-600 mt-1">{kr}</p>
+                      <span className="inline-flex items-center gap-1 mt-2 text-sm text-indigo-700">
+                        View course on K-MOOC
+                        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <path d="M7 17 17 7M7 7h10v10" />
+                        </svg>
+                        <span className="sr-only"> (opens in a new tab)</span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-gray-600 mt-4">
+                Course availability and links can change. If a session has closed,
+                search the Korean title in the{" "}
+                <a href="https://www.kmooc.kr/" target="_blank" rel="noopener noreferrer" className="text-indigo-700 underline underline-offset-4">K-MOOC catalog</a>.
+              </p>
+            </section>
 
             {/* COLUMN 3 — ACADEMIC + CURRENT WORK */}
             <div className="mx-auto w-full max-w-[360px]">
