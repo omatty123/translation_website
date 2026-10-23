@@ -1,31 +1,27 @@
-// app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Manrope } from "next/font/google";
 import "./globals.css";
 
-// Font setup
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
+const title = "Matty Wegehaupt | Banglangdang Translations";
+const description =
+  "Korean–English translation and editing by Matty Wegehaupt (오상진). Books, Buddhist scholarship, course translations, and current literary work.";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// ✅ Open Graph & Twitter metadata
 export const metadata: Metadata = {
-  title: "Banglangdang Translations",
-  description: "Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond.",
+  metadataBase: new URL("https://banglangdang.vercel.app"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  icons: { icon: "/icon.svg" },
   openGraph: {
-    title: "Banglangdang Translations",
-    description: "Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond.",
-    url: "https://banglangdang.vercel.app",
+    title,
+    description,
+    url: "/",
     siteName: "Banglangdang Translations",
     images: [
       {
-        url: "https://banglangdang.vercel.app/og-image-hanok.png",
+        url: "/og-image-hanok.png",
         width: 1200,
         height: 630,
         alt: "Banglangdang Translations",
@@ -36,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Banglangdang Translations",
-    description: "Translation, Editing, Co-collaboration in Korean/English work on Buddhism and beyond.",
-    images: ["https://banglangdang.vercel.app/og-image.png"],
+    title,
+    description,
+    images: ["/og-image-hanok.png"],
   },
 };
 
@@ -49,9 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${manrope.variable}`}>
         {children}
       </body>
     </html>

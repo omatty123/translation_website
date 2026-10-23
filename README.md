@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Banglangdang Translations
 
-## Getting Started
+The public portfolio for Banglangdang Translations: Korean–English translation, editing, publications, and course translations.
 
-First, run the development server:
+- **LIVE website:** https://banglangdang.vercel.app/
+- **Git repository:** https://github.com/omatty123/translation_website
+- **LOCAL source:** `/Users/wegehaum/workspaces/translation_website`
 
-```bash
+## Development
+
+Use Node.js 22 and the committed npm lockfile.
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The development server is **LOCAL only** at http://localhost:3000/. If that port is occupied, use the address printed by Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The site uses Next.js App Router, React, TypeScript, and Tailwind CSS. Page content lives in `app/page.tsx`, shared styles in `app/globals.css`, metadata and document structure in `app/layout.tsx`, and public assets in `public/`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Verification
 
-## Learn More
+Run the production build before the type check so Next.js can generate route types.
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm run build
+npm run typecheck
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To inspect the production build locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run start
+```
 
-## Deploy on Vercel
+Check the LOCAL site at http://localhost:3000/ in desktop and mobile widths. Check navigation, publication and course links, image rendering, readable sans-serif fonts, and horizontal overflow before publishing.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+GitHub Actions runs `npm ci`, `npm run build`, and `npm run typecheck` on pushes to `main` and on pull requests targeting `main`. The workflow is `.github/workflows/checks.yml`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Production deployment
+
+The existing Vercel project is `banglangdang`. Its Git integration deploys updates to `main` from this repository to the LIVE website at https://banglangdang.vercel.app/. Keep this project and address when updating the site. GitHub Actions verifies the code; Vercel performs the deployment independently.
+
+Before pushing, inspect the diff and complete the local checks. After pushing, verify the Vercel status for the exact Git commit and its successful Production deployment in GitHub. Then inspect the LIVE address for the expected content and layout. Deployment-specific Vercel URLs can require login, so an HTTP response from those URLs alone does not prove that the public website has updated.
+
+The local `.vercel/` association and environment files are ignored by Git. Keep credentials and private correspondence out of the repository.
+
+## Sources and maintenance
+
+- `maintenance/content-sources.md` records content and photograph provenance for the current site.
+- `maintenance/course-links.md` records the K-MOOC course-link audit and its date. A successful HTTP response alone does not verify an active course page; confirm the expected course title in the page content.
+
+Preserve original assets and source evidence when preparing display copies or revising text. Verify substantive changes against their sources before publication.
