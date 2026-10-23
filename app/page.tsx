@@ -9,6 +9,7 @@ import heroImg from "/public/Tripitaka_Koreana_02.jpeg";
 import pureImg from "/public/malgohyangi.png";
 import happyImg from "/public/mabbh.jpg";
 import hyechoImg from "/public/hyecho.png";
+import koreanBuddhismImg from "/public/korean-buddhism-readings.jpg";
 
 // ACADEMIC + CURRENT WORK
 import museShot from "/public/SangilHan.jpg";
@@ -62,6 +63,13 @@ export default function Home() {
               <h2 className="text-2xl font-semibold text-center mb-6">Books</h2>
               <div className="space-y-8">
                 {[
+                  {
+                    title: "Hyech'o's “Like the Moon through the Clouds”",
+                    img: koreanBuddhismImg,
+                    url: "https://uhpress.hawaii.edu/title/korean-buddhism-selected-readings-from-primary-texts/",
+                    desc:
+                      "In <em>Korean Buddhism: Selected Readings from Primary Texts</em>, ed. Jin Y. Park and Sumi Lee (University of Hawaiʻi Press, 2026)",
+                  },
                   {
                     title: "Pure and Fragrant",
                     img: pureImg,
